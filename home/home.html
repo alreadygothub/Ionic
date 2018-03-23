@@ -1,0 +1,22 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Home</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+
+  <button ion-button clear class= "logout" (click)="logoutUser()">Logout</button>
+  <ion-card>
+    <ion-item>
+      <ion-icon name="add"></ion-icon>
+      <!--<ion-label type="text" [(ngModel)]="first_name" name="first_name"></ion-label>-->
+    </ion-item>
+    <ion-item *ngFor="let person of persons | async">
+        {{users.first_name}}
+      </ion-item>
+  </ion-card>
+</ion-content>
